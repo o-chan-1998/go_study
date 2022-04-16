@@ -1,12 +1,20 @@
 package main
-import "fmt"
- 
+
+import (
+	"fmt"
+)
+
 func main() {
-    var a, b int
-    fmt.Scan(&a, &b)
-    if a*b%2==1 {
-        fmt.Println("Odd")
-    } else {
-        fmt.Println("Even")
-    }
+	// rr := bufio.NewReader(os.Stdin)
+	var s string
+	// fmt.Fscan(rr, &s)
+	s = "101"
+	bs := []byte(s)
+	var v int
+	for i := 0; i < 3; i++ {
+		if bs[i] == '1' {
+			v++
+		}
+	}
+	fmt.Println(v)
 }
